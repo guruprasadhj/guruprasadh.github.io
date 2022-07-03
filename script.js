@@ -5,11 +5,31 @@ window.addEventListener("load",()=>{
     document.querySelector(".page-loader").classList.add("fade-out");
     setTimeout(()=>{
         document.querySelector(".page-loader").style.display ="none";
-    },600);
+    },500);
 });
+
+/*---------------------My Try ---------------------------------*/
+window.onscroll = function() {
+    var distanceScrolled = document.documentElement.scrollTop;
+    console.log('Scrolled: ' + distanceScrolled);
+    if (distanceScrolled<100){
+        console.log("First page")
+        //document.querySelector(".home-section").classList.add("active");
+        // document.querySelector(".overlay").classList.add("active");
+        // navToggler.classList.add("hide");
+        // console.log('#home');
+        
+    }else if(distanceScrolled>20){
+        hideSection();
+        toggleNavbar();        
+    }
+}
+
+
 
 /*---------------------Toggle navbar----------------------------*/
 const navToggler = document.querySelector(".nav-toggler");
+
 navToggler.addEventListener("click", () =>{
     hideSection();
     toggleNavbar();
@@ -22,6 +42,7 @@ function hideSection(){
 function toggleNavbar(){
     document.querySelector(".header").classList.toggle("active");
 }
+
 /*---------------- Active Section ------------*/
 document.addEventListener("click",(e) =>{
     if(e.target.classList.contains("link-item")&& e.target.hash !==""){
@@ -46,6 +67,7 @@ document.addEventListener("click",(e) =>{
         },500);
     }
 });
+
 /*---------------- About Tab  ---------------*/
 const tabsContainer = document. querySelector(".about-tabs");
 aboutSection = document.querySelector(".about-section");
