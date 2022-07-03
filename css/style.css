@@ -1,3 +1,7 @@
+/*--------------
+Portfolio
+Created By Guru Prasadh J.
+----------------*/
 /*---------------
 Fonts
 ----------------*/
@@ -13,8 +17,8 @@ Variable
     --blue-dark: #18293c;
     --orange: #ff247c;/*#cddc39;*/
     --green-yellow: #cddc39;
-    --pink-light: #7bd5f5;/* #076585; # efa2b4 ;*/
-    --cyan-light:  #787ff6; /* #aef1ee;*/
+    --grad_one: #7bd5f5;/* #076585; # efa2b4 ;*/
+    --grad_two:  #787ff6; /* #aef1ee;*/
     --white: #ffffff;
     --white-alpha-40:rgba(255,255,255, 0.40);
     --white-alpha-25:rgba(255,255,255, 0.25);
@@ -37,8 +41,8 @@ Global Settings
 }
 body{
     min-height: 100vh;
-    background-color: var(--pink-light);
-    background-image: linear-gradient(to bottom right, var(--pink-light),var(--cyan-light));
+    background-color: var(--grad_one);
+    background-image: linear-gradient(to bottom right, var(--grad_one),var(--grad_two));
     background-attachment: fixed;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
