@@ -9,22 +9,40 @@ window.addEventListener("load",()=>{
 });
 
 /*---------------------My Try ---------------------------------*/
+let nextPage=false;
+var isDone =false;
 window.onscroll = function() {
+    
     var distanceScrolled = document.documentElement.scrollTop;
     console.log('Scrolled: ' + distanceScrolled);
-    if (distanceScrolled<100){
-        console.log("First page")
-        //document.querySelector(".home-section").classList.add("active");
-        // document.querySelector(".overlay").classList.add("active");
-        // navToggler.classList.add("hide");
-        // console.log('#home');
+    if ((window.innerHeight + window.scrollY) < document.body.offsetHeight)
+        //distanceScrolled<=100
+        {
+        console.log("First page");
+        //
+        if(nextPage){
+            isDone=false;
+            nextPage=false;}
         
-    }else if(distanceScrolled>20){
-        hideSection();
-        toggleNavbar();        
+        
+    }else{
+        console.log("next page");
+        if(isDone==false){
+             console.log(" you're at the bottom of the page");
+             console.log(isDone)
+            hideSection();
+            toggleNavbar(); 
+            document.body.classList.toggle("hide-scrolling")
+            nextPage=true;
+            isDone = true;            
+        }else{
+            console.log("is Done")
+            
+            
+        }
+              
     }
 }
-
 
 
 /*---------------------Toggle navbar----------------------------*/
@@ -42,7 +60,6 @@ function hideSection(){
 function toggleNavbar(){
     document.querySelector(".header").classList.toggle("active");
 }
-
 /*---------------- Active Section ------------*/
 document.addEventListener("click",(e) =>{
     if(e.target.classList.contains("link-item")&& e.target.hash !==""){
