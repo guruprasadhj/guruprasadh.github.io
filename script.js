@@ -15,10 +15,12 @@ window.onscroll = function() {
     
     var distanceScrolled = document.documentElement.scrollTop;
     console.log('Scrolled: ' + distanceScrolled);
-    if ((window.innerHeight + window.scrollY) <= document.body.offsetHeight)
+    if ((window.innerHeight + window.scrollY) <= (document.body.offsetHeight-1))
         //distanceScrolled<=100
         {
         console.log("First page");
+        console.log(window.innerHeight + window.scrollY);
+        console.log(document.body.offsetHeight);
         //
         if(nextPage){
             isDone=false;

@@ -48,7 +48,7 @@ body{
     font-weight: 300;
     color: var(--blue-dark);
     line-height: 1.5;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     -webkit-top-hightlight-color: transparent;
     padding: 35px 15px;
 }  
@@ -181,7 +181,7 @@ button{
     cursor: pointer;
     user-select: none;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     vertical-align: middle;
     transform: color 0.3s ease;
 }
