@@ -1,6 +1,6 @@
 /*--------------
 Portfolio
-Created By Guru Prasadh J.
+for & By Guru Prasadh J.
 ----------------*/
 /*Fonts
 */
@@ -14,7 +14,7 @@ Variable
     --main-color: #1f2f98;/*#f24405;#e02f6b  a800cc;*/
     --blue: #0000ff;
     --blue-dark: #18293c;
-    --orange: #ff247c;/*#cddc39;*/
+    --pink: #ff247c;/*#cddc39;*/
     --green-yellow: #cddc39;
     --grad_one: #7bd5f5;/* #076585; # efa2b4 ;*/
     --grad_two:  #787ff6; /* #aef1ee;*/
@@ -181,7 +181,7 @@ button{
     cursor: pointer;
     user-select: none;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     vertical-align: middle;
     transform: color 0.3s ease;
 }
@@ -217,17 +217,27 @@ button{
         transform: scale(0.5);
     }
     50%{
-        transform: scale(1);
+        transform: scale(2);
     }
 }
 @keyframes bounceTop {
     0%,100%{
-        transform: translateY(-50px);
+        transform: translateY(-90px);
     }
     50%{
         transform: translate(0px);
     }
 }
+@keyframes slide {
+    0%,100%{
+        transform: translateX(-90px);
+    }
+    50%{
+        transform: translate(0px);
+    }
+    
+}
+
 @keyframes spin {
     0%{
         transform: rotate(0deg);
@@ -277,14 +287,17 @@ button{
     top: 40%;
     right: -60px;
     opacity: 0.6;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
 }
 .bg-circles .circle-4{
     height: 50px;
     width: 50px;
-    background-color: var(--orange);
+    background-color: var(--pink);
     top: 80%;
-    left: -30px;
+    left: -10px;
     opacity: 0.6;
+    animation: slide 5s ease-in-out infinite;
 }
 /*
  Overlay 
@@ -343,9 +356,10 @@ button{
 .page-loader div:nth-child(3){
     height: 30px;
     width: 30px;
-    border-color: var(--orange );
+    border-color: var(--pink );
 
 }
+
 /*
  Header 
  */
@@ -486,12 +500,7 @@ Home Section
     display: block;
 }
 
-/*.home-text{
-    background-color: blue;
-}
-.home-img{
-    background-color: green;
-}*/
+
 .home-text p{
     font-size: 18px;
 }
